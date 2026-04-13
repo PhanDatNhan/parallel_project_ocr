@@ -67,7 +67,6 @@ parallel_project/
 ├── dataConfig.py      # Cấu hình dataset
 ├── cpuCount.py        # Kiểm tra CPU
 ├── hostfile.txt       # Cấu hình MPI
-├── CODE_GUIDE.md      # Giải thích code
 ├── requirements.txt   # Thư viện
 └── README.md
 ```
