@@ -1,0 +1,48 @@
+# 1. KHAI BÁO FILE
+file_name <- "sequential_results1000.csv"
+
+# 2. THƯ VIỆN
+library(ggplot2)
+
+# 3. ĐỌC DỮ LIỆU
+data <- read.csv(file_name)
+time_col <- colnames(data)[2]
+n_samples <- nrow(data)
+
+# 4. VẼ BIỂU ĐỒ (IEEE STYLE)
+ggplot(data, aes(x = "", y = .data[[time_col]])) +
+  
+  # Boxplot
+  geom_boxplot(
+    width = 0.3,
+    fill = "gray85",
+    color = "black",
+    #outlier.shape = NA
+  ) +
+
+  # Mean
+  stat_summary(
+    fun = mean,
+    geom = "point",
+    shape = 4,
+    size = 3,
+    stroke = 1,
+    color = "black"
+  ) +
+  
+  # Title + label chuẩn học thuật
+  labs(
+    title = sprintf("Phân bố thời gian thực thi (%d ảnh)", n_samples),
+    y = "Thời gian thực thi (giây)",
+    x = NULL
+  ) +
+  
+  # Style tối giản kiểu IEEE
+  theme_classic(base_size = 12) +
+  
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.y = element_text(face = "bold"),
+    axis.text = element_text(color = "black"),
+    axis.line = element_line(color = "black")
+  )

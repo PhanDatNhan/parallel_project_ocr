@@ -1,0 +1,7 @@
+Workers: 8, Batch size: 20
+
+===== PRODUCTION RESULT =====
+Total time: 586.01s
+Avg time/image: 4.274s
+Avg CER: 0.0465
+Avg WER: 0.2866
