@@ -28,8 +28,8 @@ numpy>=1.26.2
 pandas>=2.0.0
 ```
 
-- Tesseract OCR: https://github.com/tesseract-ocr/tesseract
-- Microsoft MPI: https://www.microsoft.com/en-us/download/details.aspx?id=57467
+- Tesseract OCR
+- Microsoft MPI
 
 ## Cài Đặt
 
