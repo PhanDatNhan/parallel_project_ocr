@@ -14,6 +14,7 @@ import csv
 MAX_WORKERS = 8     # 2: 2 workers, 4: 4 workers, 8: 8 workers
 BATCH_SIZE = 20     # 10:2, 1000:20, 2000:30, 4000:50
 
+
 # Tắt multithreading của Tesseract
 os.environ["OMP_THREAD_LIMIT"] = "1"
 
